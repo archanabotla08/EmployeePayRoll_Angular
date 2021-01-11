@@ -1,0 +1,44 @@
+<div>
+    <app-header></app-header>
+    <div class="main-content">
+        <div class="header-content">
+            <div class="add-detail-text">
+                Employee Payroll
+            </div>
+            <a routerLink="/employeePayrollForm" class="add-button">
+                <img src="../../../assets/icons/add-24px.svg" alt="">Add User
+            </a>
+        </div>
+        <div class="table-main">
+            <table id="display" class="table">
+                <thead>
+                    <tr>
+                        <th>Profile Picture</th>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>Gender</th>
+                        <th>Start Date</th>
+                        <th>Note</th>
+                        <th>Departments</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employeePayrollList">
+                        <td><img src="{{employee.profilePic}}" alt="" ></td>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.salary}}</td>
+                        <td>{{employee.gender}}</td>
+                        <td>{{employee.startDate}}</td>
+                        <td>{{employee.note}}</td>
+                        <td>{{employee.departments}}</td>
+                        <td>
+                            <img id="{{employee.employeeId}}" (click)="delete(employee.employeeId)"  alt="delete " src="../assets/icons/delete-black-18dp.svg ">
+                            <img id="{{employee.employeeId}}" (click)="update(employee.employeeId)"  alt="edit" src="../assets/icons/create-black-18dp.svg ">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

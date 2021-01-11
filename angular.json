@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EmployeePayRoll"
+    }
+  },
+  "defaultProject": "EmployeePayRoll",
+  "cli": {
+    "analytics": "1ef020c0-e17b-44c6-a213-c232c4c0e1fc"
+  }
 }
